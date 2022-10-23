@@ -11,7 +11,7 @@
       <div class="container is-fluid">
         <% if (msg.errors) { %>
         <div class="content">
-          <h1 style="color: red">Errors:</h1>
+          <h1 style="color: purple">Errors:</h1>
           <ol type="1">
             <% msg.errors.forEach(function(error){ %>
             <li style="color: red"><%= error %></li>
@@ -31,7 +31,7 @@
                 type="text"
                 id="first_name"
                 name="first_name"
-              />
+              ></input>
             </div>
           </div>
 
@@ -68,12 +68,13 @@
             <div class="control">
               <textarea
                 class="textarea"
-                placeholder="Enter your review here ..."
+                placeholder="This thing is not working... It's not sending the text properly, to the NLU service"
                 id="review"
                 name="review"
               ></textarea>
             </div>
           </div>
+          
           <% if (!msg.errors) { %>
           <div class="field is-grouped">
             <div class="control">
@@ -82,8 +83,10 @@
           </div>
           <%}%>
         </form>
+
       </div>
     </section>
+
     <%- include('footer'); %>
   </body>
 </html>
